@@ -1,0 +1,51 @@
+from random import randint
+
+HARD_LEVEL = 5
+EASY_LEVEL = 10
+
+
+def check_answer(guess, answer, turns):
+  
+    if guess > answer:
+      print("Too high")
+      return turns - 1
+    elif guess < answer:
+      print("Too low")
+      return turns - 1
+    else:
+      print("You win!")
+
+
+def check_difficulty():
+  
+  level = input("Choose difficulty easy or hard\n")
+  
+  if level == "easy":
+    return EASY_LEVEL
+  elif level == "hard":
+    return HARD_LEVEL
+  
+   
+
+def game():
+
+  
+  print("Welcome to the number guessing game!..")
+  answer = randint(1,100)
+
+  turns = check_difficulty()
+  guess=0
+  while guess!=answer:
+    print(f"You have {turns} attempts remaining to guess the number.")
+    guess = int(input("Guess the number?\n"))
+    turns = check_answer(guess, answer, turns)
+    if turns == 0:
+      print("You've run out of guesses")
+    elif guess!=answer:
+      print("Guess Again")
+
+  
+game()
+
+
+
