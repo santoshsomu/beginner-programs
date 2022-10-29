@@ -9,7 +9,7 @@ def computer_guess(x):
     if  low != high:
       guess = random.randint(low, high)
     else:
-      low = high
+      guess = high
     feedback = input(f"Weather the guess {guess} is low, enter 'l, high, enter 'h' or 'c' if guess is correct").lower()
     if feedback == "h":
       high = guess -1
