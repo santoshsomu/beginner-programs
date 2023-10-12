@@ -1,0 +1,12 @@
+def find_max_arr(arr,n):
+      max = arr[0]
+
+      for i in range(0,n):
+            if arr[i]>max:
+                  max = arr[i]
+      return max
+
+arr = [-5, 1, 5, 8, 97, 3043]
+n = len(arr)
+
+print(find_max_arr(arr,n))
