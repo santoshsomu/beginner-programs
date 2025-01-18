@@ -1,0 +1,35 @@
+n = int(input("enter number: "))
+
+space = 0
+star =2
+for i in range(n, 0, -1):
+    for k in range(n):
+        if i == n:
+            print("*", end = "")
+        elif i ==2:
+            print(" "*space, end ="")
+            print("*"*star)
+            star-=1
+            space +=1
+        elif i == 1:
+            print(" "*space, end ="")
+            print("*" * star)
+        else:
+            if k == space or k == n-1:
+                print("*", end = "")
+            else:
+                print(" ", end = "")
+    space += 1
+    print()
+
+#n = 10
+**********
+ *       *
+  *      *
+   *     *
+    *    *
+     *   *
+      *  *
+       * *
+        **
+         *
